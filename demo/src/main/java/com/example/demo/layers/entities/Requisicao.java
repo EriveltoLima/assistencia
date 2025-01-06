@@ -18,7 +18,7 @@ public class Requisicao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "data_abertura", nullable = false)
     private LocalDate dataAbertura;
@@ -44,11 +44,11 @@ public class Requisicao {
     @OneToMany(mappedBy = "requisicao")
     private List<RequisicaoEquipamento> equipamentos;
     
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -13,7 +13,7 @@ public class RequisicaoServico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "requisicao_id", nullable = false)

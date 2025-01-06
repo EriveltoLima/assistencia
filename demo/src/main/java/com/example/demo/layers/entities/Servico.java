@@ -14,10 +14,10 @@ public class Servico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @Column(name = "valor", nullable = false)
-    private Integer valor;
+    private Long valor;
 
     @Column(name = "servico", nullable = false)
     private String servico;
@@ -25,19 +25,19 @@ public class Servico {
     @OneToMany(mappedBy = "servico")
     private List<RequisicaoServico> requisicoes;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getValor() {
+    public Long getValor() {
         return valor;
     }
 
-    public void setValor(Integer valor) {
+    public void setValor(Long valor) {
         this.valor = valor;
     }
 
