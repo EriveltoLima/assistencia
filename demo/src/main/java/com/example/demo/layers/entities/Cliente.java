@@ -1,14 +1,12 @@
 package com.example.demo.layers.entities;
 
-import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+
 
 @Entity
 public class Cliente {
@@ -27,8 +25,6 @@ public class Cliente {
     private String telefone;
 
     // Relação 1:N com Compra
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Equipamento> Equipamentos;
 
     // Getters e Setters
     public Long getId() {
@@ -61,14 +57,6 @@ public class Cliente {
 
     public void settelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public List<Equipamento> getEquipamentos() {
-        return Equipamentos;
-    }
-
-    public void setEquipamentos(List<Equipamento> Equipamentos) {
-        this.Equipamentos = Equipamentos;
     }
 }
 
